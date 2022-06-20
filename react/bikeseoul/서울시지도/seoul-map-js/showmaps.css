@@ -1,0 +1,496 @@
+path { stroke-linecap:round; stroke-linejoin:round;
+}
+.reloadButton {
+ border: solid 1px #000; width: auto; color: #000; background-color: #fff;
+ padding: 5px 7px; font-weight: bold; border-radius: 6px;
+ position: absolute; top: 20px; left: 20px;
+}
+.reloadButton:hover {
+ border: solid 1px #f00; color: #fff; background-color: #000066; cursor: pointer;
+}
+svg#legendsForSeoulMap { width: 210px; height: 30px; border: 0; margin: 0; padding: 0;
+ position: absolute; top: 25px; left: 465px; border-radius: 10px;
+ background: rgba(255, 255, 255, 0.6);
+}
+svg#legendsForSeoulMap text { 
+ fill: #000000; stroke: #000000; font-family: "Nanum Gothic";
+ font-size: 10px; text-anchor: left; font-weight: bold; stroke-width: 0;
+}
+svg { width: 580px; height: 580px; margin: 0px auto 5px;
+ border: solid 2px #09f; border-radius: 10px;
+ text-align: center;
+}
+
+
+#seoulMap #politan path { fill: #ccffff; stroke: #000000; opacity: 0.5;
+}
+#seoulMap #line path { fill: none; stroke: yellow; stroke-width: 2px;
+opacity: 0.5; 
+}
+
+
+#mapShow .municipality { fill: #8ecad1; stroke: #333; stroke-width: 1px; fill-opacity: 1; stroke-opacity: 0.5; cursor: pointer;
+} /* fill: #99ffcc; fill: #ccffcc; */
+/* #mapShow .municipality:hover { fill: #ffcc00; } */ /* fill: #ffcc00; */
+#mapShow .municipality-label {
+ fill: #000000; font-size: 12px; font-weight: 500; text-anchor: middle; pointer-events: none;
+} /* #006600 */
+#mapShow .placeCircle { fill: #ffff00; stroke: #0000ff; opacity: 0.8; stroke-width: 1px;
+}
+#mapShow .placeName {
+display: none; fill: #000000;
+font-family: "Nanum Gothic"; font-size: 10px; text-anchor: middle; font-weight: bold;
+stroke-width: 0.2px; stroke: #ffff00;
+}
+
+#mapShow path { fill: #7b72fd; stroke: #b4b4b4; stroke-width: 0.5px;
+}
+/* #mapShow path:hover { fill: #ffcc00; } */
+#mapShow text { font-family: "Nanum Gothic"; font-size: 10px; pointer-events: none;
+}
+
+
+
+/*팝업용 css*/
+
+*{margin:0; padding:0;}
+a{text-decoration:none;}
+.wrap{padding:10px;}
+
+.btn_open{font-weight:bold; margin:5px; padding:4px 6px; background:#000; color:#fff;}
+.pop_wrap{position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,.5); font-size:0; text-align:center;}
+.pop_wrap:after{display:inline-block; height:100%; vertical-align:middle; content:'';}
+.pop_wrap .pop_inner{display:inline-block; padding:20px 30px; background:#fff; width:200px; vertical-align:middle; font-size:15px;}
+
+#mapShow {
+	text-align: center;
+}
+
+/*여기서부터 구별 코드 분리 작업 */
+
+.c112501 {
+	position: absolute;
+	display: none;
+	background-color: #ffffff;
+	border: solid 2px #d0d0d0;
+	width: 350px;
+	height: 150px;
+	padding: 10px;
+}
+.c112501 div {
+	position: absolute;
+	top: 5px;
+	right: 5px
+}
+
+/* 분리 */
+
+.c112401 {
+	position: absolute;
+	display: none;
+	background-color: #ffffff;
+	border: solid 2px #d0d0d0;
+	width: 350px;
+	height: 150px;
+	padding: 10px;
+}
+.c112401 div {
+	position: absolute;
+	top: 5px;
+	right: 5px
+}
+
+/* 분리 */
+
+.c112301 {
+	position: absolute;
+	display: none;
+	background-color: #ffffff;
+	border: solid 2px #d0d0d0;
+	width: 350px;
+	height: 150px;
+	padding: 10px;
+}
+.c112301 div {
+	position: absolute;
+	top: 5px;
+	right: 5px
+}
+
+/* 분리 */
+
+.c112201 {
+	position: absolute;
+	display: none;
+	background-color: #ffffff;
+	border: solid 2px #d0d0d0;
+	width: 350px;
+	height: 150px;
+	padding: 10px;
+}
+.c112201 div {
+	position: absolute;
+	top: 5px;
+	right: 5px
+}
+
+/* 분리 */
+
+.c112101 {
+	position: absolute;
+	display: none;
+	background-color: #ffffff;
+	border: solid 2px #d0d0d0;
+	width: 350px;
+	height: 150px;
+	padding: 10px;
+}
+.c112101 div {
+	position: absolute;
+	top: 5px;
+	right: 5px
+}
+
+/* 분리 */
+
+.c112001 {
+	position: absolute;
+	display: none;
+	background-color: #ffffff;
+	border: solid 2px #d0d0d0;
+	width: 350px;
+	height: 150px;
+	padding: 10px;
+}
+.c112001 div {
+	position: absolute;
+	top: 5px;
+	right: 5px
+}
+
+/* 분리 */
+
+.c111901 {
+	position: absolute;
+	display: none;
+	background-color: #ffffff;
+	border: solid 2px #d0d0d0;
+	width: 350px;
+	height: 150px;
+	padding: 10px;
+}
+.c111901 div {
+	position: absolute;
+	top: 5px;
+	right: 5px
+}
+
+/* 분리 */
+
+.c111801 {
+	position: absolute;
+	display: none;
+	background-color: #ffffff;
+	border: solid 2px #d0d0d0;
+	width: 350px;
+	height: 150px;
+	padding: 10px;
+}
+.c111801 div {
+	position: absolute;
+	top: 5px;
+	right: 5px
+}
+
+/* 분리 */
+
+.c111701 {
+	position: absolute;
+	display: none;
+	background-color: #ffffff;
+	border: solid 2px #d0d0d0;
+	width: 350px;
+	height: 150px;
+	padding: 10px;
+}
+.c111701 div {
+	position: absolute;
+	top: 5px;
+	right: 5px
+}
+
+/* 분리 */
+
+.c111601 {
+	position: absolute;
+	display: none;
+	background-color: #ffffff;
+	border: solid 2px #d0d0d0;
+	width: 350px;
+	height: 150px;
+	padding: 10px;
+}
+.c111601 div {
+	position: absolute;
+	top: 5px;
+	right: 5px
+}
+
+/* 분리 */
+
+.c111501 {
+	position: absolute;
+	display: none;
+	background-color: #ffffff;
+	border: solid 2px #d0d0d0;
+	width: 350px;
+	height: 150px;
+	padding: 10px;
+}
+.c111501 div {
+	position: absolute;
+	top: 5px;
+	right: 5px
+}
+
+/* 분리 */
+
+.c111401 {
+	position: absolute;
+	display: none;
+	background-color: #ffffff;
+	border: solid 2px #d0d0d0;
+	width: 350px;
+	height: 150px;
+	padding: 10px;
+}
+.c111401 div {
+	position: absolute;
+	top: 5px;
+	right: 5px
+}
+
+/* 분리 */
+
+.c111301 {
+	position: absolute;
+	display: none;
+	background-color: #ffffff;
+	border: solid 2px #d0d0d0;
+	width: 350px;
+	height: 150px;
+	padding: 10px;
+}
+.c111301 div {
+	position: absolute;
+	top: 5px;
+	right: 5px
+}
+
+/* 분리 */
+
+.c111201 {
+	position: absolute;
+	display: none;
+	background-color: #ffffff;
+	border: solid 2px #d0d0d0;
+	width: 350px;
+	height: 150px;
+	padding: 10px;
+}
+.c111201 div {
+	position: absolute;
+	top: 5px;
+	right: 5px
+}
+
+/* 분리 */
+
+.c111101 {
+	position: absolute;
+	display: none;
+	background-color: #ffffff;
+	border: solid 2px #d0d0d0;
+	width: 350px;
+	height: 150px;
+	padding: 10px;
+}
+.c111101 div {
+	position: absolute;
+	top: 5px;
+	right: 5px
+}
+
+/* 분리 */
+
+.c111001 {
+	position: absolute;
+	display: none;
+	background-color: #ffffff;
+	border: solid 2px #d0d0d0;
+	width: 350px;
+	height: 150px;
+	padding: 10px;
+}
+.c111001 div {
+	position: absolute;
+	top: 5px;
+	right: 5px
+}
+
+/* 분리 */
+
+.c110901 {
+	position: absolute;
+	display: none;
+	background-color: #ffffff;
+	border: solid 2px #d0d0d0;
+	width: 350px;
+	height: 150px;
+	padding: 10px;
+}
+.c110901 div {
+	position: absolute;
+	top: 5px;
+	right: 5px
+}
+
+/* 분리 */
+
+.c110801 {
+	position: absolute;
+	display: none;
+	background-color: #ffffff;
+	border: solid 2px #d0d0d0;
+	width: 350px;
+	height: 150px;
+	padding: 10px;
+}
+.c110801 div {
+	position: absolute;
+	top: 5px;
+	right: 5px
+}
+
+/* 분리 */
+
+.c110701 {
+	position: absolute;
+	display: none;
+	background-color: #ffffff;
+	border: solid 2px #d0d0d0;
+	width: 350px;
+	height: 150px;
+	padding: 10px;
+}
+.c110701 div {
+	position: absolute;
+	top: 5px;
+	right: 5px
+}
+
+/* 분리 */
+
+.c110601 {
+	position: absolute;
+	display: none;
+	background-color: #ffffff;
+	border: solid 2px #d0d0d0;
+	width: 350px;
+	height: 150px;
+	padding: 10px;
+}
+.c110601 div {
+	position: absolute;
+	top: 5px;
+	right: 5px
+}
+
+/* 분리 */
+
+.c110501 {
+	position: absolute;
+	display: none;
+	background-color: #ffffff;
+	border: solid 2px #d0d0d0;
+	width: 350px;
+	height: 150px;
+	padding: 10px;
+}
+.c110501 div {
+	position: absolute;
+	top: 5px;
+	right: 5px
+}
+
+/* 분리 */
+
+.c110401 {
+	position: absolute;
+	display: none;
+	background-color: #ffffff;
+	border: solid 2px #d0d0d0;
+	width: 350px;
+	height: 150px;
+	padding: 10px;
+}
+.c110401 div {
+	position: absolute;
+	top: 5px;
+	right: 5px
+}
+
+/* 분리 */
+
+.c110301 {
+	position: absolute;
+	display: none;
+	background-color: #ffffff;
+	border: solid 2px #d0d0d0;
+	width: 350px;
+	height: 150px;
+	padding: 10px;
+}
+.c110301  div {
+	position: absolute;
+	top: 5px;
+	right: 5px
+}
+
+/* 분리 */
+
+.c110201 {
+	position: absolute;
+	display: none;
+	background-color: #ffffff;
+	border: solid 2px #d0d0d0;
+	width: 350px;
+	height: 150px;
+	padding: 10px;
+}
+.c110201 div {
+	position: absolute;
+	top: 5px;
+	right: 5px
+}
+
+/* 분리 */
+
+.c110101 {
+	position: absolute;
+	display: none;
+	background-color: #ffffff;
+	border: solid 2px #d0d0d0;
+	width: 350px;
+	height: 150px;
+	padding: 10px;
+}
+.c110101 div {
+	position: absolute;
+	top: 5px;
+	right: 5px
+}
+
+/* 분리 */
+
+
