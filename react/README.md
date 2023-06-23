@@ -16,11 +16,12 @@
 
 
 ## Environment
-데이터 분석 및 전처리 : Python
 
-Library : React
+Library : React, d3.js
 
 Framework : Node.js 서버 연결
+
+데이터 전처리 : Python
 
 IDE : vscode, Jypternotebook 
 
