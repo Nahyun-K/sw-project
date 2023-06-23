@@ -19,7 +19,7 @@
 
 Library : React, d3.js
 
-Framework : Node.js 서버 연결
+Framework : Node.js
 
 데이터 전처리 : Python
 
