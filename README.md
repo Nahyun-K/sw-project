@@ -22,7 +22,7 @@
 
 Library : React
 
-Framework : Node.js 서버 연결
+Framework : Node.js
 
 IDE : vscode, Jypternotebook 
 
